@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>清平「霊性3日修練会」参加および日程のご案内【沖縄エリア】</title>
-  <meta name="description" content="清平「霊性3日修練会」参加および日程のご案内【沖縄エリア】。堀会長メッセージ、全7回開催日程一覧、お申し込み方法（A4縦1枚完結・特大文字・天心苑徹夜祈祷会深紫エディション）">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="清平「霊性3日修練会」参加および日程のご案内【沖縄エリア】">
-  <meta property="og:description" content="年内に修練会に多くの方が参加して神日本の教会再建に繋がります。日本の多くの食口が修練会に参加して多くの恩恵を受けてほしい──堀会長メッセージ・全7回日程一覧（特大文字1枚完結版）">
+  <title>清平「霊性3日修練会」参加および日程のご案内（沖縄エリア）</title>
+  
+  <!-- OGP (SNSシェア・LINE配信最適化) -->
+  <meta property="og:title" content="清平「霊性3日修練会」参加および日程のご案内（沖縄エリア）">
+  <meta property="og:description" content="信仰を深く高め、日々の歩みにおける不足な点をすべておろして新たな決意で再出発する「霊性3日修練会」の日程案内です。">
+  <meta property="og:type" content="article">
   <meta property="og:image" content="https://gs-coder8726.github.io/church-flyers/flyer_page1.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts: 高品位な秀英明朝体 & 視認性の高いゴシック体 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+
   <style>
     /* ============================================================
-       リセット & 変数設計（天心苑徹夜精誠・神秘の深紫＆ゴールド）
+       リセット & 変数設計（朝光・パールホワイト＆クラシックゴールド）
        ============================================================ */
     *, *::before, *::after {
       box-sizing: border-box;
@@ -23,32 +28,37 @@
     }
 
     :root {
-      --purple-bg: #090214;
-      --purple-deep: #16062b;
-      --purple-card: rgba(22, 8, 44, 0.76);
-      --purple-card-sub: rgba(38, 14, 72, 0.78);
-      --purple-card-border: rgba(210, 170, 255, 0.40);
+      --bg-base: #f2f5fa;
+      --navy-main: #041026;       /* 主テキスト：最深濃紺（圧倒的コントラスト） */
+      --navy-deep: #020814;
+      --navy-sub: #122442;
       
-      --gold-primary: #f5cf68;
-      --gold-deep: #d8a528;
-      --gold-light: #fff2b8;
-      --gold-border: rgba(245, 207, 104, 0.55);
+      --gold-primary: #a8791c;    /* クラシックゴールド */
+      --gold-deep: #8a5e08;
+      --gold-light: #d8b248;
+      --gold-border: rgba(168, 121, 28, 0.48);
+      --gold-frame: rgba(184, 134, 11, 0.55);
       
+      /* 背景がうっすら綺麗に見える高透過フロストグラス（透明度約45%〜55%） */
+      --card-glass: rgba(255, 255, 255, 0.46);
+      --card-glass-sub: rgba(255, 255, 255, 0.55);
+      --card-glass-border: rgba(255, 255, 255, 0.85);
+      
+      --text-navy: #041026;
+      --text-sub: #152640;
       --text-white: #ffffff;
-      --text-gold: #fce79a;
-      --text-cream: #fff4ce;
       
-      --status-active-bg: linear-gradient(135deg, #d8a528, #f7d879);
-      --status-active-text: #16062b;
-      --status-closed-bg: rgba(65, 45, 90, 0.65);
-      --status-closed-text: #c9badb;
+      --status-active-bg: linear-gradient(135deg, #b8861b, #dfb758);
+      --status-active-text: #ffffff;
+      --status-closed-bg: rgba(215, 210, 202, 0.78);
+      --status-closed-text: #5e594e;
     }
 
     html, body {
       width: 100%;
-      background-color: var(--purple-bg);
+      background-color: var(--bg-base);
       font-family: 'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-      color: var(--text-white);
+      color: var(--navy-main);
       line-height: 1.45;
       -webkit-font-smoothing: antialiased;
     }
@@ -60,7 +70,7 @@
       align-items: center;
       padding: 20px 16px 40px;
       gap: 24px;
-      background: radial-gradient(circle at 50% 10%, #200a3d 0%, #090214 70%);
+      background: radial-gradient(circle at 50% 10%, #eef4fc 0%, #d4e0f2 70%);
     }
 
     /* 画面上部のアクションバー（印刷時は非表示） */
@@ -70,11 +80,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(18, 6, 36, 0.92);
+      background: rgba(255, 255, 255, 0.92);
       border: 1px solid var(--gold-border);
       border-radius: 50px;
       padding: 10px 24px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(180, 120, 255, 0.25);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 16px rgba(184, 134, 11, 0.15);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       position: sticky;
@@ -85,11 +95,10 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 800;
-      color: var(--gold-primary);
+      color: var(--gold-deep);
       letter-spacing: 0.05em;
-      text-shadow: 0 0 10px rgba(245, 207, 104, 0.5);
     }
     .action-group {
       display: flex;
@@ -97,15 +106,15 @@
       gap: 10px;
     }
     .action-btn {
-      background: linear-gradient(135deg, #f5cf68, #c59725);
-      color: #16062b;
+      background: linear-gradient(135deg, #c59737, #dfb758);
+      color: #ffffff;
       border: none;
       font-weight: 900;
       font-size: 14px;
       padding: 8px 18px;
       border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 2px 12px rgba(245, 207, 104, 0.4);
+      box-shadow: 0 2px 10px rgba(197, 151, 55, 0.35);
       transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
@@ -115,18 +124,18 @@
     }
     .action-btn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 4px 18px rgba(245, 207, 104, 0.6);
-      background: linear-gradient(135deg, #ffe08a, #d8a528);
+      box-shadow: 0 4px 16px rgba(197, 151, 55, 0.5);
+      background: linear-gradient(135deg, #d4a747, #ecc768);
     }
     .action-btn-secondary {
-      background: linear-gradient(135deg, #581d9e, #2e0c59);
+      background: linear-gradient(135deg, #182c4d, #0d1b32);
       color: #ffffff;
-      border: 1px solid rgba(220, 180, 255, 0.45);
-      box-shadow: 0 2px 12px rgba(88, 29, 158, 0.4);
+      border: 1px solid rgba(24, 44, 77, 0.3);
+      box-shadow: 0 2px 10px rgba(13, 27, 50, 0.25);
     }
     .action-btn-secondary:hover {
-      background: linear-gradient(135deg, #6e25c4, #3d1075);
-      box-shadow: 0 4px 18px rgba(110, 37, 196, 0.6);
+      background: linear-gradient(135deg, #254273, #152b4d);
+      box-shadow: 0 4px 16px rgba(13, 27, 50, 0.4);
     }
 
     /* ============================================================
@@ -138,9 +147,9 @@
       aspect-ratio: 210 / 297;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.8), 0 0 40px rgba(138, 58, 235, 0.25);
-      background-color: #0d041a;
-      background-image: url('images/bg_lake_stars.jpg');
+      box-shadow: 0 20px 60px rgba(10, 25, 50, 0.18), 0 0 35px rgba(184, 134, 11, 0.12);
+      background-color: #f7f9fd;
+      background-image: url('images/cheonbo_sunrise_majestic.jpg');
       background-size: cover;
       background-position: center top;
       background-repeat: no-repeat;
@@ -153,16 +162,16 @@
     .outer-frame {
       position: absolute;
       inset: 12px;
-      border: 1.8px solid var(--gold-border);
+      border: 1.8px solid var(--gold-frame);
       border-radius: 4px;
       pointer-events: none;
       z-index: 10;
-      box-shadow: inset 0 0 15px rgba(138, 58, 235, 0.2);
+      box-shadow: inset 0 0 12px rgba(184, 134, 11, 0.12);
     }
     .inner-frame {
       position: absolute;
       inset: 16px;
-      border: 0.75px solid rgba(245, 207, 104, 0.35);
+      border: 0.75px solid rgba(168, 121, 28, 0.35);
       border-radius: 2px;
       pointer-events: none;
       z-index: 10;
@@ -173,7 +182,7 @@
       height: 16px;
       border-color: var(--gold-primary);
       z-index: 11;
-      filter: drop-shadow(0 0 4px rgba(245, 207, 104, 0.6));
+      filter: drop-shadow(0 0 3px rgba(168, 121, 28, 0.4));
     }
     .corner-tl { top: 10px; left: 10px; border-top: 2px solid var(--gold-primary); border-left: 2px solid var(--gold-primary); }
     .corner-tr { top: 10px; right: 10px; border-top: 2px solid var(--gold-primary); border-right: 2px solid var(--gold-primary); }
@@ -200,17 +209,17 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 800;
       letter-spacing: 0.25em;
-      color: var(--gold-light);
-      text-shadow: 0 0 12px rgba(245, 207, 104, 0.8), 0 2px 4px rgba(0, 0, 0, 0.8);
+      color: var(--gold-deep);
+      text-shadow: 0 0 10px #ffffff, 0 1px 3px rgba(255, 255, 255, 0.95);
       margin-bottom: 2px;
     }
     .top-sub-badge::before,
     .top-sub-badge::after {
       content: "";
-      width: 36px;
+      width: 40px;
       height: 1.5px;
       background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
     }
@@ -219,97 +228,97 @@
     }
     .main-title {
       font-family: 'Shippori Mincho', serif;
-      font-size: 50px;
+      font-size: 54px;
       font-weight: 800;
       letter-spacing: 0.05em;
-      color: var(--text-white);
-      text-shadow: 0 0 24px rgba(186, 130, 255, 0.9), 0 0 12px #ffffff, 0 2px 6px rgba(0, 0, 0, 0.9);
+      color: var(--navy-main);
+      text-shadow: 0 0 14px #ffffff, 0 0 24px rgba(255, 255, 255, 0.95), 0 2px 5px rgba(255, 255, 255, 0.9);
       line-height: 1.15;
     }
     .main-title .bracket {
-      color: var(--gold-primary);
+      color: var(--gold-deep);
       font-size: 0.95em;
-      text-shadow: 0 0 16px rgba(245, 207, 104, 0.8);
+      text-shadow: 0 0 12px #ffffff;
     }
     .title-subcopy {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 800;
       letter-spacing: 0.20em;
-      color: var(--gold-light);
-      text-shadow: 0 0 14px rgba(245, 207, 104, 0.7), 0 2px 4px rgba(0, 0, 0, 0.8);
+      color: var(--gold-deep);
+      text-shadow: 0 0 12px #ffffff, 0 1px 3px rgba(255, 255, 255, 0.95);
       margin-top: 2px;
     }
 
-    /* 2. 天心苑・パノラマ景観ウィンドウ（神殿ドームと光芒が見える空間） */
+    /* 2. 天正宮・神殿景観パノラマウィンドウ（神殿ドームと青空が見える空間） */
     .palace-window {
-      flex: 0 0 20px;
+      flex: 0 0 14px;
     }
 
-    /* 3. 要約メッセージコンテナ（深紫クリスタルすりガラス・特大フォント） */
+    /* 3. 要約メッセージコンテナ（背景がうっすら透ける高透過フロストグラス・特大フォント） */
     .message-container {
-      background: var(--purple-card);
-      border: 1.5px solid var(--purple-card-border);
+      background: var(--card-glass);
+      border: 1.5px solid rgba(255, 255, 255, 0.85);
       border-radius: 8px;
       padding: 12px 20px 10px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(140, 70, 240, 0.15);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 6px 20px rgba(10, 25, 50, 0.08), inset 0 0 16px rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(4.5px);
+      -webkit-backdrop-filter: blur(4.5px);
     }
     .intro-text {
-      font-size: 20.5px;
+      font-size: 22.0px;
       font-weight: 700;
-      color: var(--text-white);
+      color: var(--navy-main);
       line-height: 1.45;
       letter-spacing: -0.01em;
       margin-bottom: 8px;
       text-align: justify;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 8px rgba(25, 5, 50, 0.8);
+      text-shadow: 0 0 10px #ffffff, 0 1px 3px rgba(255, 255, 255, 0.95);
     }
 
     /* 堀会長メッセージ枠 */
     .quote-box {
-      background: linear-gradient(135deg, rgba(58, 20, 98, 0.85), rgba(32, 10, 58, 0.90));
-      border-left: 5px solid var(--gold-primary);
-      border-top: 1px solid var(--gold-border);
-      border-right: 1px solid rgba(245, 207, 104, 0.30);
-      border-bottom: 1px solid var(--gold-border);
+      background: linear-gradient(135deg, rgba(255, 252, 242, 0.70), rgba(255, 247, 230, 0.75));
+      border-left: 6px solid var(--gold-primary);
+      border-top: 1px solid rgba(168, 121, 28, 0.35);
+      border-right: 1px solid rgba(168, 121, 28, 0.25);
+      border-bottom: 1px solid rgba(168, 121, 28, 0.35);
       border-radius: 0 8px 8px 0;
       padding: 9px 16px;
       margin: 8px 0;
-      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 3px 12px rgba(168, 121, 28, 0.10);
     }
     .quote-text {
-      font-size: 20.0px;
+      font-size: 21.5px;
       font-weight: 700;
-      color: var(--text-cream);
+      color: var(--navy-main);
       line-height: 1.40;
       letter-spacing: -0.01em;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+      text-shadow: 0 0 8px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.95);
     }
     .quote-author {
-      color: var(--gold-primary);
+      color: var(--gold-deep);
       font-weight: 900;
-      text-shadow: 0 0 8px rgba(245, 207, 104, 0.6);
+      text-shadow: 0 0 8px #ffffff;
     }
 
     .closing-text {
-      font-size: 20.5px;
+      font-size: 22.0px;
       font-weight: 800;
-      color: var(--text-white);
+      color: var(--navy-main);
       text-align: center;
       line-height: 1.40;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 10px rgba(186, 130, 255, 0.6);
+      text-shadow: 0 0 10px #ffffff, 0 1px 3px rgba(255, 255, 255, 0.95);
     }
 
-    /* 4. 開催日程一覧セクション（全7回・特大フォント縦並び） */
+    /* 4. 開催日程一覧セクション（全7回・特大フォント縦並び・背景うっすら透け感） */
     .schedule-section {
-      background: var(--purple-card);
-      border: 1.5px solid var(--purple-card-border);
+      background: var(--card-glass);
+      border: 1.5px solid rgba(255, 255, 255, 0.85);
       border-radius: 8px;
       padding: 10px 18px 8px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 6px 20px rgba(10, 25, 50, 0.08);
+      backdrop-filter: blur(4.5px);
+      -webkit-backdrop-filter: blur(4.5px);
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -319,49 +328,49 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      font-size: 23px;
+      font-size: 24px;
       font-weight: 900;
-      color: var(--gold-primary);
+      color: var(--gold-deep);
       letter-spacing: 0.15em;
       border-bottom: 1.5px solid var(--gold-border);
       padding-bottom: 4px;
       margin-bottom: 2px;
-      text-shadow: 0 0 10px rgba(245, 207, 104, 0.7);
+      text-shadow: 0 0 10px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.9);
     }
     .section-head::before,
     .section-head::after {
       content: "✦";
-      color: var(--gold-light);
-      font-size: 17px;
+      color: var(--gold-primary);
+      font-size: 18px;
     }
 
-    /* 日程カード（縦並び・特大サイズ） */
+    /* 日程カード（縦並び・特大サイズ・背景うっすら透け感） */
     .date-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: var(--purple-card-sub);
-      border: 1.2px solid rgba(200, 160, 255, 0.32);
+      background: var(--card-glass-sub);
+      border: 1.2px solid rgba(168, 121, 28, 0.30);
       border-radius: 6px;
       padding: 6px 16px;
       width: 100%;
       box-sizing: border-box;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
     }
     .date-card.row-active {
-      background: linear-gradient(90deg, rgba(82, 28, 140, 0.88), rgba(110, 38, 185, 0.82), rgba(82, 28, 140, 0.88));
-      border: 2px solid var(--gold-primary);
-      box-shadow: inset 0 0 10px rgba(245, 207, 104, 0.40), 0 3px 14px rgba(138, 58, 235, 0.45);
+      background: linear-gradient(90deg, rgba(255, 246, 224, 0.82), rgba(255, 252, 240, 0.88), rgba(255, 246, 224, 0.82));
+      border: 2.2px solid var(--gold-primary);
+      box-shadow: inset 0 0 10px rgba(168, 121, 28, 0.20), 0 3px 12px rgba(168, 121, 28, 0.22);
     }
     .date-card.row-closed {
-      opacity: 0.82;
-      background: rgba(30, 15, 52, 0.65);
-      border: 1.2px solid rgba(140, 110, 180, 0.3);
+      opacity: 0.85;
+      background: rgba(235, 233, 228, 0.65);
+      border: 1.2px solid rgba(170, 165, 155, 0.35);
     }
     .date-card.row-special {
-      background: linear-gradient(90deg, rgba(45, 18, 80, 0.75), rgba(70, 25, 120, 0.85), rgba(45, 18, 80, 0.75));
-      border: 1.5px solid var(--gold-primary);
+      background: linear-gradient(90deg, rgba(255, 250, 238, 0.72), rgba(255, 244, 222, 0.80), rgba(255, 250, 238, 0.72));
+      border: 1.6px solid var(--gold-primary);
     }
 
     .date-main {
@@ -371,29 +380,29 @@
       white-space: nowrap;
     }
     .round-tag {
-      font-size: 21px;
+      font-size: 23px;
       font-weight: 900;
-      color: var(--gold-primary);
+      color: var(--gold-deep);
       white-space: nowrap;
-      text-shadow: 0 0 8px rgba(245, 207, 104, 0.6);
-      min-width: 95px;
+      text-shadow: 0 0 8px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.9);
+      min-width: 100px;
     }
     .round-date {
-      font-size: 22.5px;
+      font-size: 24.5px;
       font-weight: 900;
-      color: var(--text-white);
+      color: var(--navy-main);
       white-space: nowrap;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+      text-shadow: 0 0 10px #ffffff, 0 1px 3px rgba(255, 255, 255, 0.95);
     }
     .date-card.row-active .round-date {
-      color: #ffffff;
+      color: var(--navy-deep);
       font-weight: 900;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
+      text-shadow: 0 0 12px #ffffff, 0 1px 3px rgba(255, 255, 255, 0.95);
     }
     .status-badge {
-      font-size: 15px;
+      font-size: 15.5px;
       font-weight: 900;
-      padding: 3px 10px;
+      padding: 3px 12px;
       border-radius: 16px;
       white-space: nowrap;
       flex-shrink: 0;
@@ -402,58 +411,58 @@
     .badge-active {
       background: var(--status-active-bg);
       color: var(--status-active-text);
-      box-shadow: 0 2px 8px rgba(245, 207, 104, 0.5);
+      box-shadow: 0 2px 8px rgba(184, 134, 11, 0.4);
       border: 1px solid #fff2b8;
     }
     .badge-closed {
       background: var(--status-closed-bg);
       color: var(--status-closed-text);
-      border: 1px solid rgba(160, 130, 200, 0.3);
+      border: 1px solid rgba(160, 150, 140, 0.4);
     }
 
-    /* 5. お申し込み・詳細セクション（最下部・特大文字） */
+    /* 5. お申し込み・詳細セクション（最下部・特大文字・ゴールド枠） */
     .apply-section {
-      background: linear-gradient(135deg, rgba(62, 20, 108, 0.90), rgba(36, 10, 68, 0.94));
-      border: 1.8px solid var(--gold-primary);
+      background: linear-gradient(135deg, rgba(255, 250, 238, 0.72), rgba(255, 245, 226, 0.78));
+      border: 2px solid var(--gold-primary);
       border-radius: 8px;
       padding: 10px 20px 9px;
       text-align: center;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(245, 207, 104, 0.25);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 6px 20px rgba(10, 25, 50, 0.08), 0 0 14px rgba(168, 121, 28, 0.15);
+      backdrop-filter: blur(4.5px);
+      -webkit-backdrop-filter: blur(4.5px);
     }
     .apply-head {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 900;
-      color: var(--gold-primary);
+      color: var(--gold-deep);
       letter-spacing: 0.15em;
       margin-bottom: 3px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      text-shadow: 0 0 10px rgba(245, 207, 104, 0.7);
+      text-shadow: 0 0 10px #ffffff;
     }
     .apply-head::before,
     .apply-head::after {
       content: "✦";
-      color: var(--gold-light);
-      font-size: 16px;
+      color: var(--gold-primary);
+      font-size: 17px;
     }
     .apply-text {
-      font-size: 22.5px;
+      font-size: 24.5px;
       font-weight: 900;
-      color: var(--text-white);
+      color: var(--navy-main);
       line-height: 1.35;
       letter-spacing: -0.01em;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+      text-shadow: 0 0 10px #ffffff, 0 1px 3px rgba(255, 255, 255, 0.95);
     }
     .apply-strong {
-      color: var(--gold-primary);
+      color: var(--gold-deep);
       text-decoration: underline;
       text-underline-offset: 5px;
-      text-decoration-thickness: 2px;
-      text-shadow: 0 0 10px rgba(245, 207, 104, 0.8);
+      text-decoration-thickness: 2.5px;
+      text-shadow: 0 0 10px #ffffff;
     }
 
     /* ============================================================
@@ -468,7 +477,7 @@
       body, html {
         width: 210mm;
         height: 297mm;
-        background: #090214 !important;
+        background: #ffffff !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
         overflow: hidden !important;
@@ -527,7 +536,7 @@
         gap: 10px;
       }
       .action-badge {
-        font-size: 11.5px;
+        font-size: 12px;
         text-align: center;
       }
       .action-group {
@@ -549,18 +558,18 @@
         gap: 14px;
       }
       .top-sub-badge {
-        font-size: 14px;
+        font-size: 15px;
         gap: 6px;
       }
       .top-sub-badge::before,
       .top-sub-badge::after {
-        width: 18px;
+        width: 20px;
       }
       .main-title {
-        font-size: 30px;
+        font-size: 31px;
       }
       .title-subcopy {
-        font-size: 17px;
+        font-size: 18px;
       }
       .palace-window {
         flex: 0 0 10px;
@@ -569,19 +578,19 @@
         padding: 10px 14px;
       }
       .intro-text {
-        font-size: 15.5px;
+        font-size: 16.5px;
       }
       .quote-box {
         padding: 8px 12px;
       }
       .quote-text {
-        font-size: 15.0px;
+        font-size: 16.0px;
       }
       .closing-text {
-        font-size: 15.5px;
+        font-size: 16.5px;
       }
       .section-head {
-        font-size: 18px;
+        font-size: 19px;
       }
       .date-card {
         padding: 6px 10px;
@@ -593,21 +602,21 @@
         flex-wrap: wrap;
       }
       .round-tag {
-        font-size: 16px;
+        font-size: 17px;
         min-width: auto;
       }
       .round-date {
-        font-size: 16.5px;
+        font-size: 17.5px;
       }
       .status-badge {
-        font-size: 12.5px;
-        padding: 2px 7px;
+        font-size: 13px;
+        padding: 2px 8px;
       }
       .apply-head {
-        font-size: 16.5px;
+        font-size: 17px;
       }
       .apply-text {
-        font-size: 17px;
+        font-size: 18px;
       }
     }
   </style>
@@ -619,7 +628,7 @@
     <header class="action-bar">
       <div class="action-badge">
         <span>✨</span>
-        <span>清平「霊性3日修練会」天心苑徹夜祈祷会 深紫エディション（A4 1枚完結版）</span>
+        <span>清平「霊性3日修練会」朝光・パールホワイト＆ゴールド（A4 1枚完結版）</span>
       </div>
       <div class="action-group">
         <a class="action-btn action-btn-secondary" href="flyer_a4.pdf" download="清平霊性3日修練会_チラシ.pdf">
@@ -654,10 +663,10 @@
           <p class="title-subcopy">参加および日程のご案内</p>
         </header>
 
-        <!-- 2. 天心苑・神殿ドームパノラマ景観ウィンドウ -->
+        <!-- 2. 天正宮・神殿景観パノラマウィンドウ -->
         <div class="palace-window"></div>
 
-        <!-- 3. 要約メッセージコンテナ（深紫クリスタルすりガラス・特大フォント） -->
+        <!-- 3. 要約メッセージコンテナ（背景がうっすら透ける高透過フロストグラス・特大フォント） -->
         <section class="message-container">
           <p class="intro-text">
             愛する沖縄エリアの食口の皆様へ。信仰を深く高め、日々の歩みにおける不足な点をすべておろして新たな決意で再出発する「霊性3日修練会」の日程をご案内いたします。
@@ -675,7 +684,7 @@
           </p>
         </section>
 
-        <!-- 4. 全7回 開催日程一覧（特大フォント・縦並び完全一直線整列） -->
+        <!-- 4. 全7回 開催日程一覧（特大フォント・縦並び完全一直線整列・背景うっすら透け感） -->
         <section class="schedule-section">
           <div class="section-head">開催日程一覧</div>
 
@@ -738,7 +747,7 @@
           </div>
         </section>
 
-        <!-- 5. お申し込み・詳細案内（全幅・特大文字・アメジスト＆ゴールド光彩） -->
+        <!-- 5. お申し込み・詳細案内（全幅・特大文字・クラシックゴールド枠） -->
         <footer class="apply-section">
           <div class="apply-head">お申し込み・詳細</div>
           <p class="apply-text">
