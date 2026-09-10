@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>清平「霊性3日修練会」参加および日程のご案内【沖縄エリア】</title>
-  <meta name="description" content="清平「霊性3日修練会」参加および日程のご案内【沖縄エリア】。堀会長メッセージ、全7回開催日程一覧、お申し込み方法（全2ページ・特大文字版・徹夜祈祷会深紫エディション）">
+  <meta name="description" content="清平「霊性3日修練会」参加および日程のご案内【沖縄エリア】。堀会長メッセージ、全7回開催日程一覧、お申し込み方法（A4縦1枚完結・特大文字・天心苑徹夜祈祷会深紫エディション）">
   <meta property="og:type" content="website">
   <meta property="og:title" content="清平「霊性3日修練会」参加および日程のご案内【沖縄エリア】">
-  <meta property="og:description" content="年内に修練会に多くの方が参加して神日本の教会再建に繋がります。日本の多くの食口が修練会に参加して多くの恩恵を受けてほしい──堀会長メッセージ・日程一覧（全2ページ特大文字版）">
+  <meta property="og:description" content="年内に修練会に多くの方が参加して神日本の教会再建に繋がります。日本の多くの食口が修練会に参加して多くの恩恵を受けてほしい──堀会長メッセージ・全7回日程一覧（特大文字1枚完結版）">
   <meta property="og:image" content="https://gs-coder8726.github.io/church-flyers/flyer_page1.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@600;700;900&display=swap" rel="stylesheet">
   <style>
     /* ============================================================
-       リセット & 変数設計（天心苑特別徹夜精誠・神秘の深紫＆ゴールド）
+       リセット & 変数設計（天心苑徹夜精誠・神秘の深紫＆ゴールド）
        ============================================================ */
     *, *::before, *::after {
       box-sizing: border-box;
@@ -23,19 +23,16 @@
     }
 
     :root {
-      /* 徹夜祈祷会・天心苑の神秘の深紫＆黄金パレット */
       --purple-bg: #090214;
       --purple-deep: #16062b;
-      --purple-main: #240b45;
-      --purple-card: rgba(22, 8, 42, 0.72);
-      --purple-card-sub: rgba(36, 14, 68, 0.75);
-      --purple-card-border: rgba(200, 160, 255, 0.38);
+      --purple-card: rgba(22, 8, 44, 0.76);
+      --purple-card-sub: rgba(38, 14, 72, 0.78);
+      --purple-card-border: rgba(210, 170, 255, 0.40);
       
       --gold-primary: #f5cf68;
       --gold-deep: #d8a528;
       --gold-light: #fff2b8;
       --gold-border: rgba(245, 207, 104, 0.55);
-      --gold-glow: rgba(255, 220, 110, 0.45);
       
       --text-white: #ffffff;
       --text-gold: #fce79a;
@@ -52,7 +49,7 @@
       background-color: var(--purple-bg);
       font-family: 'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
       color: var(--text-white);
-      line-height: 1.55;
+      line-height: 1.45;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -61,8 +58,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 16px 48px;
-      gap: 36px;
+      padding: 20px 16px 40px;
+      gap: 24px;
       background: radial-gradient(circle at 50% 10%, #200a3d 0%, #090214 70%);
     }
 
@@ -133,7 +130,7 @@
     }
 
     /* ============================================================
-       チラシ本体（A4アスペクト比 1 : 1.414）各ページ共通
+       チラシ本体（A4縦1枚ジャスト 比率 1 : 1.414）
        ============================================================ */
     .flyer-page {
       width: 100%;
@@ -152,7 +149,7 @@
       border-radius: 4px;
     }
 
-    /* クラシカル・ダブルゴールドフレーム（アメジスト光彩） */
+    /* クラシカル・ダブルゴールドフレーム */
     .outer-frame {
       position: absolute;
       inset: 12px;
@@ -164,7 +161,7 @@
     }
     .inner-frame {
       position: absolute;
-      inset: 17px;
+      inset: 16px;
       border: 0.75px solid rgba(245, 207, 104, 0.35);
       border-radius: 2px;
       pointer-events: none;
@@ -172,35 +169,18 @@
     }
     .corner-decor {
       position: absolute;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       border-color: var(--gold-primary);
       z-index: 11;
       filter: drop-shadow(0 0 4px rgba(245, 207, 104, 0.6));
     }
-    .corner-tl { top: 10px; left: 10px; border-top: 2.5px solid var(--gold-primary); border-left: 2.5px solid var(--gold-primary); }
-    .corner-tr { top: 10px; right: 10px; border-top: 2.5px solid var(--gold-primary); border-right: 2.5px solid var(--gold-primary); }
-    .corner-bl { bottom: 10px; left: 10px; border-bottom: 2.5px solid var(--gold-primary); border-left: 2.5px solid var(--gold-primary); }
-    .corner-br { bottom: 10px; right: 10px; border-bottom: 2.5px solid var(--gold-primary); border-right: 2.5px solid var(--gold-primary); }
+    .corner-tl { top: 10px; left: 10px; border-top: 2px solid var(--gold-primary); border-left: 2px solid var(--gold-primary); }
+    .corner-tr { top: 10px; right: 10px; border-top: 2px solid var(--gold-primary); border-right: 2px solid var(--gold-primary); }
+    .corner-bl { bottom: 10px; left: 10px; border-bottom: 2px solid var(--gold-primary); border-left: 2px solid var(--gold-primary); }
+    .corner-br { bottom: 10px; right: 10px; border-bottom: 2px solid var(--gold-primary); border-right: 2px solid var(--gold-primary); }
 
-    /* ページ番号バッジ（右上） */
-    .page-indicator {
-      position: absolute;
-      top: 24px;
-      right: 26px;
-      background: linear-gradient(135deg, rgba(42, 14, 76, 0.90), rgba(22, 6, 42, 0.90));
-      border: 1px solid var(--gold-primary);
-      padding: 2px 12px;
-      border-radius: 12px;
-      font-size: 13.5px;
-      font-weight: 900;
-      color: var(--gold-primary);
-      z-index: 15;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-      letter-spacing: 0.05em;
-    }
-
-    /* チラシ内部コンテンツ */
+    /* チラシ内部コンテンツ（1枚に美しく収まるフレックス配置） */
     .flyer-content {
       position: relative;
       z-index: 5;
@@ -208,45 +188,43 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 22px 24px 18px;
+      padding: 20px 24px 18px;
     }
 
-    /* ============================================================
-       【1枚目：ご案内・メッセージ編】専用スタイル
-       ============================================================ */
-    .p1-header {
+    /* 1. ヘッダー */
+    .flyer-header {
       text-align: center;
-      padding-top: 4px;
+      padding-top: 2px;
     }
     .top-sub-badge {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-      font-size: 23px;
+      gap: 12px;
+      font-size: 20px;
       font-weight: 800;
-      letter-spacing: 0.30em;
+      letter-spacing: 0.25em;
       color: var(--gold-light);
       text-shadow: 0 0 12px rgba(245, 207, 104, 0.8), 0 2px 4px rgba(0, 0, 0, 0.8);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .top-sub-badge::before,
     .top-sub-badge::after {
       content: "";
-      width: 44px;
+      width: 36px;
       height: 1.5px;
       background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
     }
     .main-title-wrap {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .main-title {
       font-family: 'Shippori Mincho', serif;
-      font-size: 62px;
+      font-size: 50px;
       font-weight: 800;
       letter-spacing: 0.05em;
       color: var(--text-white);
       text-shadow: 0 0 24px rgba(186, 130, 255, 0.9), 0 0 12px #ffffff, 0 2px 6px rgba(0, 0, 0, 0.9);
-      line-height: 1.16;
+      line-height: 1.15;
     }
     .main-title .bracket {
       color: var(--gold-primary);
@@ -254,227 +232,169 @@
       text-shadow: 0 0 16px rgba(245, 207, 104, 0.8);
     }
     .title-subcopy {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 800;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.20em;
       color: var(--gold-light);
       text-shadow: 0 0 14px rgba(245, 207, 104, 0.7), 0 2px 4px rgba(0, 0, 0, 0.8);
-      margin-top: 4px;
+      margin-top: 2px;
     }
 
-    /* パノラマ景観ウィンドウ（天心苑・神殿ドームと夜空の光芒が見える） */
-    .p1-palace-window {
-      flex: 0 0 35px;
+    /* 2. 天心苑・パノラマ景観ウィンドウ（神殿ドームと光芒が見える空間） */
+    .palace-window {
+      flex: 0 0 20px;
     }
 
-    /* メッセージコンテナ（深紫クリスタルすりガラス・特大フォント） */
-    .p1-message-container {
+    /* 3. 要約メッセージコンテナ（深紫クリスタルすりガラス・特大フォント） */
+    .message-container {
       background: var(--purple-card);
       border: 1.5px solid var(--purple-card-border);
-      border-radius: 10px;
-      padding: 16px 22px 14px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(140, 70, 240, 0.15);
+      border-radius: 8px;
+      padding: 12px 20px 10px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(140, 70, 240, 0.15);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
     }
-    .intro-paragraph {
-      font-size: 25.5px;
+    .intro-text {
+      font-size: 20.5px;
       font-weight: 700;
       color: var(--text-white);
-      line-height: 1.50;
-      letter-spacing: -0.015em;
-      margin-bottom: 12px;
-      text-align: justify;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 10px rgba(25, 5, 50, 0.8);
-    }
-
-    /* 堀会長メッセージ引用ボックス（聖なる精誠引用枠） */
-    .p1-quote-box {
-      background: linear-gradient(135deg, rgba(58, 20, 98, 0.85), rgba(32, 10, 58, 0.90));
-      border-left: 6px solid var(--gold-primary);
-      border-top: 1px solid var(--gold-border);
-      border-right: 1px solid rgba(245, 207, 104, 0.35);
-      border-bottom: 1px solid var(--gold-border);
-      border-radius: 0 10px 10px 0;
-      padding: 12px 20px;
-      margin: 14px 0;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(245, 207, 104, 0.12);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-    }
-    .quote-text {
-      font-size: 25.0px;
-      font-weight: 700;
-      color: var(--text-cream);
       line-height: 1.45;
       letter-spacing: -0.01em;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95), 0 0 8px rgba(245, 207, 104, 0.3);
+      margin-bottom: 8px;
+      text-align: justify;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 8px rgba(25, 5, 50, 0.8);
+    }
+
+    /* 堀会長メッセージ枠 */
+    .quote-box {
+      background: linear-gradient(135deg, rgba(58, 20, 98, 0.85), rgba(32, 10, 58, 0.90));
+      border-left: 5px solid var(--gold-primary);
+      border-top: 1px solid var(--gold-border);
+      border-right: 1px solid rgba(245, 207, 104, 0.30);
+      border-bottom: 1px solid var(--gold-border);
+      border-radius: 0 8px 8px 0;
+      padding: 9px 16px;
+      margin: 8px 0;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+    }
+    .quote-text {
+      font-size: 20.0px;
+      font-weight: 700;
+      color: var(--text-cream);
+      line-height: 1.40;
+      letter-spacing: -0.01em;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
     }
     .quote-author {
       color: var(--gold-primary);
       font-weight: 900;
-      text-shadow: 0 0 10px rgba(245, 207, 104, 0.6);
+      text-shadow: 0 0 8px rgba(245, 207, 104, 0.6);
     }
 
     .closing-text {
-      font-size: 25.5px;
+      font-size: 20.5px;
       font-weight: 800;
       color: var(--text-white);
       text-align: center;
-      line-height: 1.46;
-      margin-top: 10px;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(186, 130, 255, 0.6);
+      line-height: 1.40;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 10px rgba(186, 130, 255, 0.6);
     }
 
-    /* 1枚目下部の次ページ誘導バナー */
-    .next-page-banner {
-      width: 100%;
-      background: linear-gradient(135deg, rgba(62, 22, 104, 0.88), rgba(36, 10, 68, 0.92));
-      border: 1.5px solid var(--gold-primary);
-      border-radius: 8px;
-      padding: 9px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      font-size: 21.0px;
-      font-weight: 900;
-      color: var(--gold-primary);
-      letter-spacing: 0.08em;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(245, 207, 104, 0.25);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      text-shadow: 0 0 10px rgba(245, 207, 104, 0.7);
-    }
-    .next-page-banner .arrow {
-      font-size: 24px;
-      color: var(--gold-light);
-    }
-
-    /* ============================================================
-       【2枚目：開催日程・お申し込み詳細編】専用スタイル
-       ============================================================ */
-    .p2-header {
-      text-align: center;
-      padding-top: 4px;
-      margin-bottom: 8px;
-    }
-    .p2-main-title {
-      font-family: 'Shippori Mincho', serif;
-      font-size: 45px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      color: var(--text-white);
-      text-shadow: 0 0 24px rgba(186, 130, 255, 0.9), 0 0 12px #ffffff, 0 2px 6px rgba(0, 0, 0, 0.9);
-      line-height: 1.18;
-      white-space: nowrap;
-    }
-    .p2-subcopy {
-      font-size: 23px;
-      font-weight: 800;
-      letter-spacing: 0.15em;
-      color: var(--gold-light);
-      text-shadow: 0 0 12px rgba(245, 207, 104, 0.7), 0 2px 4px rgba(0, 0, 0, 0.8);
-      margin-top: 3px;
-    }
-
-    /* 日程セクション（全7回を縦1列で特大配置） */
-    .p2-schedule-section {
+    /* 4. 開催日程一覧セクション（全7回・特大フォント縦並び） */
+    .schedule-section {
       background: var(--purple-card);
       border: 1.5px solid var(--purple-card-border);
-      border-radius: 10px;
-      padding: 12px 18px 10px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(140, 70, 240, 0.15);
+      border-radius: 8px;
+      padding: 10px 18px 8px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
     }
-    .p2-section-head {
+    .section-head {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      font-size: 27px;
+      gap: 10px;
+      font-size: 23px;
       font-weight: 900;
       color: var(--gold-primary);
       letter-spacing: 0.15em;
-      border-bottom: 2px solid var(--gold-border);
-      padding-bottom: 5px;
-      margin-bottom: 3px;
-      text-shadow: 0 0 12px rgba(245, 207, 104, 0.7);
+      border-bottom: 1.5px solid var(--gold-border);
+      padding-bottom: 4px;
+      margin-bottom: 2px;
+      text-shadow: 0 0 10px rgba(245, 207, 104, 0.7);
     }
-    .p2-section-head::before,
-    .p2-section-head::after {
+    .section-head::before,
+    .section-head::after {
       content: "✦";
       color: var(--gold-light);
-      font-size: 20px;
+      font-size: 17px;
     }
 
     /* 日程カード（縦並び・特大サイズ） */
-    .p2-date-card {
+    .date-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
       background: var(--purple-card-sub);
-      border: 1.5px solid rgba(200, 160, 255, 0.32);
-      border-radius: 8px;
-      padding: 8px 18px;
+      border: 1.2px solid rgba(200, 160, 255, 0.32);
+      border-radius: 6px;
+      padding: 6px 16px;
       width: 100%;
       box-sizing: border-box;
-      transition: all 0.2s ease;
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
     }
-    .p2-date-card.row-active {
+    .date-card.row-active {
       background: linear-gradient(90deg, rgba(82, 28, 140, 0.88), rgba(110, 38, 185, 0.82), rgba(82, 28, 140, 0.88));
       border: 2px solid var(--gold-primary);
-      box-shadow: inset 0 0 12px rgba(245, 207, 104, 0.40), 0 4px 18px rgba(138, 58, 235, 0.45);
+      box-shadow: inset 0 0 10px rgba(245, 207, 104, 0.40), 0 3px 14px rgba(138, 58, 235, 0.45);
     }
-    .p2-date-card.row-closed {
+    .date-card.row-closed {
       opacity: 0.82;
       background: rgba(30, 15, 52, 0.65);
-      border: 1.5px solid rgba(140, 110, 180, 0.3);
+      border: 1.2px solid rgba(140, 110, 180, 0.3);
     }
-    .p2-date-card.row-special {
+    .date-card.row-special {
       background: linear-gradient(90deg, rgba(45, 18, 80, 0.75), rgba(70, 25, 120, 0.85), rgba(45, 18, 80, 0.75));
-      border: 1.8px solid var(--gold-primary);
+      border: 1.5px solid var(--gold-primary);
     }
 
-    .p2-date-main {
+    .date-main {
       display: flex;
       align-items: center;
       gap: 12px;
       white-space: nowrap;
     }
-    .p2-round-tag {
-      font-size: 24.5px;
+    .round-tag {
+      font-size: 21px;
       font-weight: 900;
       color: var(--gold-primary);
-      letter-spacing: -0.01em;
       white-space: nowrap;
-      text-shadow: 0 0 10px rgba(245, 207, 104, 0.6);
-      min-width: 105px;
+      text-shadow: 0 0 8px rgba(245, 207, 104, 0.6);
+      min-width: 95px;
     }
-    .p2-round-date {
-      font-size: 26.5px;
+    .round-date {
+      font-size: 22.5px;
       font-weight: 900;
       color: var(--text-white);
-      letter-spacing: -0.02em;
       white-space: nowrap;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
     }
-    .p2-date-card.row-active .p2-round-date {
+    .date-card.row-active .round-date {
       color: #ffffff;
       font-weight: 900;
-      text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 1px 4px rgba(0, 0, 0, 0.9);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
     }
-    .p2-status-badge {
-      font-size: 16.5px;
+    .status-badge {
+      font-size: 15px;
       font-weight: 900;
-      padding: 4px 12px;
-      border-radius: 20px;
+      padding: 3px 10px;
+      border-radius: 16px;
       white-space: nowrap;
       flex-shrink: 0;
       letter-spacing: 0.05em;
@@ -482,7 +402,7 @@
     .badge-active {
       background: var(--status-active-bg);
       color: var(--status-active-text);
-      box-shadow: 0 2px 10px rgba(245, 207, 104, 0.5);
+      box-shadow: 0 2px 8px rgba(245, 207, 104, 0.5);
       border: 1px solid #fff2b8;
     }
     .badge-closed {
@@ -491,53 +411,53 @@
       border: 1px solid rgba(160, 130, 200, 0.3);
     }
 
-    /* お申し込み・詳細セクション（最下部・全幅・超特大文字） */
-    .p2-apply-section {
+    /* 5. お申し込み・詳細セクション（最下部・特大文字） */
+    .apply-section {
       background: linear-gradient(135deg, rgba(62, 20, 108, 0.90), rgba(36, 10, 68, 0.94));
-      border: 2px solid var(--gold-primary);
-      border-radius: 10px;
-      padding: 13px 22px 12px;
+      border: 1.8px solid var(--gold-primary);
+      border-radius: 8px;
+      padding: 10px 20px 9px;
       text-align: center;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(245, 207, 104, 0.25);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(245, 207, 104, 0.25);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
     }
-    .p2-apply-head {
-      font-size: 23px;
+    .apply-head {
+      font-size: 20px;
       font-weight: 900;
       color: var(--gold-primary);
       letter-spacing: 0.15em;
-      margin-bottom: 5px;
+      margin-bottom: 3px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       text-shadow: 0 0 10px rgba(245, 207, 104, 0.7);
     }
-    .p2-apply-head::before,
-    .p2-apply-head::after {
+    .apply-head::before,
+    .apply-head::after {
       content: "✦";
       color: var(--gold-light);
-      font-size: 18px;
+      font-size: 16px;
     }
-    .p2-apply-text {
-      font-size: 27.5px;
+    .apply-text {
+      font-size: 22.5px;
       font-weight: 900;
       color: var(--text-white);
-      line-height: 1.38;
+      line-height: 1.35;
       letter-spacing: -0.01em;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
     }
-    .p2-apply-strong {
+    .apply-strong {
       color: var(--gold-primary);
       text-decoration: underline;
-      text-underline-offset: 6px;
-      text-decoration-thickness: 2.5px;
-      text-shadow: 0 0 12px rgba(245, 207, 104, 0.8);
+      text-underline-offset: 5px;
+      text-decoration-thickness: 2px;
+      text-shadow: 0 0 10px rgba(245, 207, 104, 0.8);
     }
 
     /* ============================================================
-       印刷用スタイル（@media print）: A4縦 各1枚・合計厳密に2ページ
+       印刷用スタイル（@media print）: A4縦1枚ジャスト・厳密1ページ完結
        ============================================================ */
     @page {
       size: A4 portrait;
@@ -547,14 +467,17 @@
     @media print {
       body, html {
         width: 210mm;
+        height: 297mm;
         background: #090214 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        overflow: hidden !important;
       }
       .web-wrapper {
         padding: 0 !important;
         background: none !important;
         gap: 0 !important;
+        min-height: auto !important;
       }
       .action-bar {
         display: none !important;
@@ -568,32 +491,24 @@
         box-shadow: none !important;
         margin: 0 !important;
         padding: 0 !important;
-        page-break-after: always !important;
-        break-after: page !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
         page-break-inside: avoid !important;
         break-inside: avoid !important;
       }
-      .flyer-page:last-child {
-        page-break-after: avoid !important;
-        break-after: avoid !important;
-      }
       .flyer-content {
-        padding: 13mm 14mm 11mm !important;
+        padding: 12mm 14mm 10mm !important;
       }
       .outer-frame {
-        inset: 7mm !important;
+        inset: 6.5mm !important;
       }
       .inner-frame {
-        inset: 9.5mm !important;
+        inset: 9mm !important;
       }
-      .corner-tl { top: 6mm !important; left: 6mm !important; }
-      .corner-tr { top: 6mm !important; right: 6mm !important; }
-      .corner-bl { bottom: 6mm !important; left: 6mm !important; }
-      .corner-br { bottom: 6mm !important; right: 6mm !important; }
-      .page-indicator {
-        top: 13mm !important;
-        right: 14mm !important;
-      }
+      .corner-tl { top: 5.5mm !important; left: 5.5mm !important; }
+      .corner-tr { top: 5.5mm !important; right: 5.5mm !important; }
+      .corner-bl { bottom: 5.5mm !important; left: 5.5mm !important; }
+      .corner-br { bottom: 5.5mm !important; right: 5.5mm !important; }
     }
 
     /* ============================================================
@@ -602,7 +517,7 @@
     @media screen and (max-width: 768px) {
       .web-wrapper {
         padding: 10px 6px 32px;
-        gap: 24px;
+        gap: 20px;
       }
       .action-bar {
         border-radius: 16px;
@@ -630,76 +545,69 @@
         border-radius: 8px;
       }
       .flyer-content {
-        padding: 20px 12px 18px;
-      }
-      .page-indicator {
-        top: 14px;
-        right: 14px;
-        font-size: 11.5px;
-        padding: 2px 8px;
+        padding: 18px 12px 16px;
+        gap: 14px;
       }
       .top-sub-badge {
-        font-size: 15px;
-        gap: 8px;
+        font-size: 14px;
+        gap: 6px;
       }
       .top-sub-badge::before,
       .top-sub-badge::after {
-        width: 20px;
+        width: 18px;
       }
       .main-title {
-        font-size: 32px;
+        font-size: 30px;
       }
       .title-subcopy {
-        font-size: 18px;
+        font-size: 17px;
       }
-      .intro-paragraph {
-        font-size: 17.5px;
+      .palace-window {
+        flex: 0 0 10px;
       }
-      .quote-text {
-        font-size: 17.0px;
+      .message-container {
+        padding: 10px 14px;
       }
-      .closing-text {
-        font-size: 17.5px;
-      }
-      .next-page-banner {
+      .intro-text {
         font-size: 15.5px;
+      }
+      .quote-box {
         padding: 8px 12px;
       }
-      .p2-main-title {
-        font-size: 24px;
-        white-space: normal;
+      .quote-text {
+        font-size: 15.0px;
       }
-      .p2-subcopy {
-        font-size: 15px;
+      .closing-text {
+        font-size: 15.5px;
       }
-      .p2-section-head {
-        font-size: 19px;
-      }
-      .p2-date-card {
-        padding: 8px 10px;
-        flex-wrap: wrap;
-        gap: 6px;
-      }
-      .p2-date-main {
-        gap: 6px;
-        flex-wrap: wrap;
-      }
-      .p2-round-tag {
-        font-size: 17px;
-        min-width: auto;
-      }
-      .p2-round-date {
-        font-size: 17.5px;
-      }
-      .p2-status-badge {
-        font-size: 13px;
-        padding: 3px 8px;
-      }
-      .p2-apply-head {
+      .section-head {
         font-size: 18px;
       }
-      .p2-apply-text {
-        font-size: 20px;
+      .date-card {
+        padding: 6px 10px;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .date-main {
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .round-tag {
+        font-size: 16px;
+        min-width: auto;
+      }
+      .round-date {
+        font-size: 16.5px;
+      }
+      .status-badge {
+        font-size: 12.5px;
+        padding: 2px 7px;
+      }
+      .apply-head {
+        font-size: 16.5px;
+      }
+      .apply-text {
+        font-size: 17px;
       }
     }
   </style>
@@ -711,20 +619,20 @@
     <header class="action-bar">
       <div class="action-badge">
         <span>✨</span>
-        <span>清平「霊性3日修練会」天心苑徹夜祈祷会 深紫エディション</span>
+        <span>清平「霊性3日修練会」天心苑徹夜祈祷会 深紫エディション（A4 1枚完結版）</span>
       </div>
       <div class="action-group">
         <a class="action-btn action-btn-secondary" href="flyer_a4.pdf" download="清平霊性3日修練会_チラシ.pdf">
           <span>📥</span> PDFダウンロード
         </a>
         <button class="action-btn" onclick="window.print()">
-          <span>🖨️</span> A4（全2ページ）で印刷
+          <span>🖨️</span> A4（1枚）で印刷
         </button>
       </div>
     </header>
 
     <!-- ============================================================
-         【1枚目：ご案内・メッセージ編】
+         【チラシ本体：A4縦1枚ジャスト完結】
          ============================================================ -->
     <article class="flyer-page">
       <!-- クラシカル・ダブルゴールドフレーム -->
@@ -735,13 +643,10 @@
       <div class="corner-decor corner-bl"></div>
       <div class="corner-decor corner-br"></div>
 
-      <!-- ページ番号 -->
-      <div class="page-indicator">1 / 2 ページ</div>
-
-      <!-- 1枚目コンテンツ -->
+      <!-- チラシ内部コンテンツ -->
       <div class="flyer-content">
         <!-- 1. ヘッダー -->
-        <header class="p1-header">
+        <header class="flyer-header">
           <div class="top-sub-badge">沖縄エリアの皆様へ</div>
           <div class="main-title-wrap">
             <h1 class="main-title">清平<span class="bracket">「</span>霊性3日修練会<span class="bracket">」</span></h1>
@@ -749,137 +654,98 @@
           <p class="title-subcopy">参加および日程のご案内</p>
         </header>
 
-        <!-- 2. 天心苑・神殿ドームの神秘的なパノラマ景観エリア -->
-        <div class="p1-palace-window"></div>
+        <!-- 2. 天心苑・神殿ドームパノラマ景観ウィンドウ -->
+        <div class="palace-window"></div>
 
-        <!-- 3. メッセージ本文コンテナ（深紫クリスタルすりガラス・特大フォント） -->
-        <section class="p1-message-container">
-          <p class="intro-paragraph">
-            愛する沖縄エリアの食口の皆様、いつも天の父母様と真の父母様に熱い精誠を捧げてくださり、心から感謝申し上げます。
-          </p>
-          <p class="intro-paragraph">
-            この度、沖縄エリアの皆様がさらなる霊的成長と新たな出発の恩恵を受けられるよう、清平で行われる「霊性3日修練会」の日程をご案内いたします。
-          </p>
-          <p class="intro-paragraph">
-            霊性3日修は、涙と真心のこもった精誠を捧げながら、自身の信仰をさらに深く高め、日々の歩みにおける不足な点をすべておろして新たな決意で再出発するための特別なプログラムです。
+        <!-- 3. 要約メッセージコンテナ（深紫クリスタルすりガラス・特大フォント） -->
+        <section class="message-container">
+          <p class="intro-text">
+            愛する沖縄エリアの食口の皆様へ。信仰を深く高め、日々の歩みにおける不足な点をすべておろして新たな決意で再出発する「霊性3日修練会」の日程をご案内いたします。
           </p>
 
           <!-- 堀会長メッセージ引用ボックス -->
-          <div class="p1-quote-box">
+          <div class="quote-box">
             <p class="quote-text">
-              <span class="quote-author">堀会長</span>からは、「年内に修練会に多くの方が参加して神日本の教会再建に繋がります。日本の多くの食口が修練会に参加して多くの恩恵を受けてほしい」という温かい願いが寄せられています。
+              <span class="quote-author">堀会長メッセージ：</span>「年内に修練会に多くの方が参加して神日本の教会再建に繋がります。日本の多くの食口が修練会に参加して多くの恩恵を受けてほしい」
             </p>
           </div>
 
           <p class="closing-text">
-            天心苑の聖なる環境のなかで、真のお母様と心情深く一体となり、豊かな天の愛と恵みを力強く受けてまいりましょう。<br>
-            多くの皆様のご参加を心よりお待ちしております。
+            天心苑の聖なる環境のなかで、真のお母様と心情深く一体となり、豊かな天の恩恵を力強く受けてまいりましょう。多くの皆様のご参加を心よりお待ちしております。
           </p>
         </section>
 
-        <!-- 4. 2枚目（開催日程一覧）への誘導バナー -->
-        <footer class="next-page-banner">
-          <span>✦ 開催日程一覧・お申し込み詳細は【2枚目】をご覧ください</span>
-          <span class="arrow">➔</span>
-        </footer>
-      </div>
-    </article>
-
-    <!-- ============================================================
-         【2枚目：開催日程・お申し込み詳細編】
-         ============================================================ -->
-    <article class="flyer-page">
-      <!-- クラシカル・ダブルゴールドフレーム -->
-      <div class="outer-frame"></div>
-      <div class="inner-frame"></div>
-      <div class="corner-decor corner-tl"></div>
-      <div class="corner-decor corner-tr"></div>
-      <div class="corner-decor corner-bl"></div>
-      <div class="corner-decor corner-br"></div>
-
-      <!-- ページ番号 -->
-      <div class="page-indicator">2 / 2 ページ</div>
-
-      <!-- 2枚目コンテンツ -->
-      <div class="flyer-content">
-        <!-- 1. ヘッダー -->
-        <header class="p2-header">
-          <div class="top-sub-badge" style="font-size: 21px; margin-bottom: 2px;">清平「霊性3日修練会」</div>
-          <h2 class="p2-main-title">開催日程一覧 ＆ お申し込み詳細</h2>
-          <p class="p2-subcopy">天心苑の恩恵を受け、新たな決意で再出発の時</p>
-        </header>
-
-        <!-- 2. 全7回 開催日程一覧（特大フォント・縦1列・完全一直線整列） -->
-        <section class="p2-schedule-section">
-          <div class="p2-section-head">開催日程一覧</div>
+        <!-- 4. 全7回 開催日程一覧（特大フォント・縦並び完全一直線整列） -->
+        <section class="schedule-section">
+          <div class="section-head">開催日程一覧</div>
 
           <!-- 第12次 -->
-          <div class="p2-date-card row-closed">
-            <div class="p2-date-main">
-              <span class="p2-round-tag">第12次 ：</span>
-              <span class="p2-round-date">9月15日(火) ～ 9月18日(金)</span>
+          <div class="date-card row-closed">
+            <div class="date-main">
+              <span class="round-tag">第12次 ：</span>
+              <span class="round-date">9月15日(火) ～ 9月18日(金)</span>
             </div>
-            <span class="p2-status-badge badge-closed">※受付終了</span>
+            <span class="status-badge badge-closed">※受付終了</span>
           </div>
 
           <!-- 第13次（現在受付中・黄金オーラ強調） -->
-          <div class="p2-date-card row-active">
-            <div class="p2-date-main">
-              <span class="p2-round-tag">第13次 ：</span>
-              <span class="p2-round-date">10月6日(火) ～ 10月9日(金)</span>
+          <div class="date-card row-active">
+            <div class="date-main">
+              <span class="round-tag">第13次 ：</span>
+              <span class="round-date">10月6日(火) ～ 10月9日(金)</span>
             </div>
-            <span class="p2-status-badge badge-active">※受付中</span>
+            <span class="status-badge badge-active">※受付中</span>
           </div>
 
           <!-- 第14次 -->
-          <div class="p2-date-card">
-            <div class="p2-date-main">
-              <span class="p2-round-tag">第14次 ：</span>
-              <span class="p2-round-date">10月20日(火) ～ 10月23日(金)</span>
+          <div class="date-card">
+            <div class="date-main">
+              <span class="round-tag">第14次 ：</span>
+              <span class="round-date">10月20日(火) ～ 10月23日(金)</span>
             </div>
           </div>
 
           <!-- 第15次 -->
-          <div class="p2-date-card">
-            <div class="p2-date-main">
-              <span class="p2-round-tag">第15次 ：</span>
-              <span class="p2-round-date">11月3日(火) ～ 11月6日(金)</span>
+          <div class="date-card">
+            <div class="date-main">
+              <span class="round-tag">第15次 ：</span>
+              <span class="round-date">11月3日(火) ～ 11月6日(金)</span>
             </div>
           </div>
 
           <!-- 第16次 -->
-          <div class="p2-date-card">
-            <div class="p2-date-main">
-              <span class="p2-round-tag">第16次 ：</span>
-              <span class="p2-round-date">11月17日(火) ～ 11月21日(土)</span>
+          <div class="date-card">
+            <div class="date-main">
+              <span class="round-tag">第16次 ：</span>
+              <span class="round-date">11月17日(火) ～ 11月21日(土)</span>
             </div>
           </div>
 
           <!-- 第17次 -->
-          <div class="p2-date-card">
-            <div class="p2-date-main">
-              <span class="p2-round-tag">第17次 ：</span>
-              <span class="p2-round-date">12月1日(火) ～ 12月4日(金)</span>
+          <div class="date-card">
+            <div class="date-main">
+              <span class="round-tag">第17次 ：</span>
+              <span class="round-date">12月1日(火) ～ 12月4日(金)</span>
             </div>
           </div>
 
           <!-- 第18次（年末年始） -->
-          <div class="p2-date-card row-special">
-            <div class="p2-date-main">
-              <span class="p2-round-tag">第18次 ：</span>
-              <span class="p2-round-date">12月28日(月) ～ 1月1日(金)</span>
+          <div class="date-card row-special">
+            <div class="date-main">
+              <span class="round-tag">第18次 ：</span>
+              <span class="round-date">12月28日(月) ～ 1月1日(金)</span>
             </div>
           </div>
         </section>
 
-        <!-- 3. お申し込み・詳細案内（全幅・超特大文字・アメジスト＆ゴールド光彩） -->
-        <section class="p2-apply-section">
-          <div class="p2-apply-head">お申し込み・詳細</div>
-          <p class="p2-apply-text">
+        <!-- 5. お申し込み・詳細案内（全幅・特大文字・アメジスト＆ゴールド光彩） -->
+        <footer class="apply-section">
+          <div class="apply-head">お申し込み・詳細</div>
+          <p class="apply-text">
             参加申し込みに関しては、<br>
-            <span class="p2-apply-strong">基台長や区域長まで</span>ご連絡ください。
+            <span class="apply-strong">基台長や区域長まで</span>ご連絡ください。
           </p>
-        </section>
+        </footer>
       </div>
     </article>
   </div>
