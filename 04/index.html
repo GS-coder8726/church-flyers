@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本部「被害報告アンケート」ご協力のお願い【沖縄エリア】</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       リセット & 変数設計（ノーブル・ディープティール & アイボリーゴールド）
+       ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --teal-deep: #07262c;
+      --teal-main: #0b3b45;
+      --teal-rich: #105260;
+      --teal-light: #e6f1f3;
+      --teal-pale: #f0f7f8;
+      --gold-deep: #8a6514;
+      --gold-main: #b8860b;
+      --gold-light: #d4af37;
+      --gold-border: rgba(184, 134, 11, 0.40);
+      --bg-cream: #faf9f5;
+      --card-white: rgba(255, 255, 255, 0.94);
+      --text-main: #06191d;
+      --text-muted: #2d454a;
+    }
+
+    body {
+      background-color: #e9ecef;
+      font-family: "Zen Kaku Gothic New", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", sans-serif;
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Web用ラッパー */
+    .web-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* 画面上部のアクションバー */
+    .action-bar {
+      width: 100%;
+      max-width: 820px;
+      background: #ffffff;
+      border: 1px solid #dcdfe3;
+      border-radius: 50px;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+    .action-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--teal-main);
+    }
+    .action-btn {
+      background: linear-gradient(135deg, #0b3b45, #105260);
+      color: #ffffff;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 3px 10px rgba(11, 59, 69, 0.25);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .action-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(11, 59, 69, 0.35);
+      background: linear-gradient(135deg, #07262c, #0b3b45);
+    }
+
+    /* チラシ本体（A4縦比率: 1 : 1.414） */
+    .flyer {
+      width: 100%;
+      max-width: 820px;
+      aspect-ratio: 1 / 1.414;
+      background: var(--bg-cream);
+      position: relative;
+      box-shadow: 0 16px 48px rgba(11, 59, 69, 0.15);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 背景グラデーション & 繊細な装飾光彩 */
+    .flyer-bg-decor {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background: 
+        radial-gradient(circle at 50% 0%, rgba(230, 241, 243, 0.8) 0%, transparent 60%),
+        radial-gradient(circle at 10% 30%, rgba(245, 235, 210, 0.4) 0%, transparent 45%),
+        radial-gradient(circle at 90% 70%, rgba(230, 241, 243, 0.5) 0%, transparent 50%),
+        linear-gradient(180deg, #fdfcf9 0%, #f7f6f0 100%);
+    }
+
+    /* 上品な二重フレーム装飾（クラシックティール＆ゴールド） */
+    .outer-frame {
+      position: absolute;
+      inset: 12px;
+      border: 1.5px solid var(--teal-main);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .inner-frame {
+      position: absolute;
+      inset: 16px;
+      border: 1px solid var(--gold-border);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .corner-decor {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-color: var(--gold-main);
+      border-style: solid;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .corner-tl { top: 9px; left: 9px; border-width: 2.5px 0 0 2.5px; }
+    .corner-tr { top: 9px; right: 9px; border-width: 2.5px 2.5px 0 0; }
+    .corner-bl { bottom: 9px; left: 9px; border-width: 0 0 2.5px 2.5px; }
+    .corner-br { bottom: 9px; right: 9px; border-width: 0 2.5px 2.5px 0; }
+
+    /* チラシコンテンツ領域 */
+    .flyer-content {
+      position: relative;
+      z-index: 4;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px 28px 18px;
+    }
+
+    /* 1. ヘッダーセクション */
+    .header-section {
+      text-align: center;
+      padding-top: 0px;
+    }
+    .area-badge-wrap {
+      margin-bottom: 4px;
+    }
+    .area-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      color: var(--gold-deep);
+      background: rgba(255, 250, 240, 0.92);
+      border: 1.2px solid var(--gold-border);
+      padding: 4px 22px;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(184, 134, 11, 0.08);
+    }
+    .area-badge::before,
+    .area-badge::after {
+      content: "✦";
+      color: var(--gold-main);
+      font-size: 14px;
+    }
+    .main-title {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--teal-deep);
+      line-height: 1.22;
+      margin-bottom: 4px;
+    }
+    .title-line {
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .header-subcopy {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--teal-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 2px;
+    }
+    .header-subcopy span {
+      display: inline-block;
+    }
+    .sec-title-text {
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .contact-closing span {
+      display: inline-block;
+    }
+    .header-subcopy::before,
+    .header-subcopy::after {
+      content: "";
+      width: 32px;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, var(--gold-main), transparent);
+    }
+
+    /* 2. 趣旨説明・メッセージセクション */
+    .message-card {
+      background: var(--card-white);
+      border: 1.5px solid rgba(11, 59, 69, 0.20);
+      border-top: 3.5px solid var(--teal-main);
+      border-radius: 8px;
+      padding: 12px 20px 10px;
+      box-shadow: 0 6px 20px rgba(11, 59, 69, 0.06);
+    }
+    .greeting-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--teal-deep);
+      line-height: 1.48;
+      margin-bottom: 6px;
+      text-align: justify;
+    }
+
+    /* 実態集約の背景ハイライト */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(230, 241, 243, 0.92), rgba(240, 247, 248, 0.85));
+      border-left: 5px solid var(--teal-rich);
+      border-radius: 0 6px 6px 0;
+      padding: 8px 16px;
+      margin: 6px 0;
+      box-shadow: 0 2px 8px rgba(11, 59, 69, 0.05);
+    }
+    .highlight-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #06282e;
+      line-height: 1.48;
+      text-align: justify;
+    }
+    .highlight-text strong {
+      color: #031b20;
+      font-weight: 900;
+      background: linear-gradient(transparent 60%, rgba(212, 175, 55, 0.25) 60%);
+    }
+
+    .importance-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.48;
+      margin-top: 6px;
+      text-align: justify;
+    }
+    .importance-text strong {
+      color: var(--teal-main);
+      font-weight: 900;
+    }
+
+    /* 3. アンケート概要・ご回答セクション（左右2列レイアウト） */
+    .survey-section {
+      background: var(--card-white);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 8px;
+      padding: 10px 18px 10px;
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.08);
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--teal-deep);
+      letter-spacing: 0.08em;
+      border-bottom: 1.5px solid rgba(184, 134, 11, 0.30);
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+    }
+    .section-title::before,
+    .section-title::after {
+      content: "✦";
+      color: var(--gold-main);
+      font-size: 15px;
+    }
+
+    /* 左右2分割グリッド（入力案内 & QRコード） */
+    .survey-grid {
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .survey-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    /* 回答ボタン（Web・スマホ対応） */
+    .online-btn-card {
+      background: linear-gradient(135deg, #0b3b45, #125766);
+      border-radius: 6px;
+      padding: 9px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: 0 3px 12px rgba(11, 59, 69, 0.25);
+      transition: all 0.2s ease;
+    }
+    .online-btn-card:hover {
+      background: linear-gradient(135deg, #07262c, #0b3b45);
+      transform: translateY(-1px);
+    }
+    .btn-main-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .btn-badge {
+      font-size: 12px;
+      font-weight: 800;
+      color: #e6be68;
+      letter-spacing: 0.08em;
+      margin-bottom: 2px;
+    }
+    .btn-title {
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+    .btn-arrow {
+      font-size: 22px;
+      font-weight: 900;
+      color: #e6be68;
+    }
+
+    /* URL直書き表示 */
+    .url-box {
+      background: #f7fafb;
+      border: 1px dashed rgba(11, 59, 69, 0.35);
+      border-radius: 5px;
+      padding: 5px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .url-label {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--teal-main);
+    }
+    .url-link {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0b5394;
+      word-break: break-all;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* 入力が必要な主な基本項目 */
+    .items-box {
+      background: #fffcf5;
+      border: 1px solid rgba(184, 134, 11, 0.25);
+      border-radius: 6px;
+      padding: 7px 12px;
+    }
+    .items-title {
+      font-size: 16.5px;
+      font-weight: 900;
+      color: var(--gold-deep);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .items-badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .item-tag {
+      background: var(--teal-main);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 3px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+    .items-note {
+      font-size: 15px;
+      font-weight: 700;
+      color: #444444;
+      line-height: 1.4;
+    }
+
+    /* QRコード表示カラム */
+    .qr-col {
+      background: #ffffff;
+      border: 1.5px solid rgba(11, 59, 69, 0.25);
+      border-radius: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(11, 59, 69, 0.06);
+    }
+    .qr-badge {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--teal-main);
+      background: var(--teal-light);
+      padding: 2px 10px;
+      border-radius: 12px;
+      margin-bottom: 5px;
+      white-space: nowrap;
+    }
+    .qr-img {
+      width: 130px;
+      height: 130px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      display: block;
+    }
+    .qr-guide {
+      font-size: 13px;
+      font-weight: 700;
+      color: #333333;
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    /* 4. お問い合わせ・サポートセクション（安心の窓口） */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(255, 250, 238, 0.96), rgba(254, 245, 222, 0.92));
+      border: 1.5px solid var(--gold-main);
+      border-radius: 8px;
+      padding: 8px 18px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      box-shadow: 0 3px 12px rgba(184, 134, 11, 0.12);
+    }
+    .contact-lead {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--gold-deep);
+      text-align: center;
+    }
+    .contact-main-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 2px 0;
+    }
+    .contact-person {
+      font-size: 19.5px;
+      font-weight: 900;
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .contact-phone-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 25px;
+      font-weight: 900;
+      color: #995c00;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      background: #ffffff;
+      border: 1.5px solid var(--gold-main);
+      padding: 3px 18px;
+      border-radius: 24px;
+      box-shadow: 0 2px 6px rgba(184, 134, 11, 0.12);
+      transition: all 0.2s ease;
+    }
+    .contact-phone-btn:hover {
+      background: #fff8e7;
+      transform: scale(1.02);
+    }
+    .contact-closing {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--teal-main);
+      text-align: center;
+      margin-top: 1px;
+    }
+
+    /* ============================================================
+       印刷用スタイル（@media print）: A4縦1枚ジャスト・優雅な余白
+       ============================================================ */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      body, html {
+        width: 210mm;
+        height: 297mm;
+        background: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .web-wrapper {
+        padding: 0 !important;
+        min-height: auto !important;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .flyer {
+        max-width: 210mm !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        aspect-ratio: auto !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      .flyer-content {
+        padding: 18px 24px 16px !important;
+      }
+      .outer-frame {
+        inset: 8px !important;
+      }
+      .inner-frame {
+        inset: 12px !important;
+      }
+      .corner-tl { top: 6px !important; left: 6px !important; }
+      .corner-tr { top: 6px !important; right: 6px !important; }
+      .corner-bl { bottom: 6px !important; left: 6px !important; }
+      .corner-br { bottom: 6px !important; right: 6px !important; }
+    }
+
+    /* ============================================================
+       スマホ表示最適化（シニア向け文字拡大 & レスポンシブ）
+       ============================================================ */
+    @media screen and (max-width: 768px) {
+      .web-wrapper {
+        padding: 10px 6px 32px;
+      }
+      .action-bar {
+        border-radius: 16px;
+        padding: 8px 12px;
+      }
+      .action-badge {
+        font-size: 12px;
+      }
+      .action-btn {
+        font-size: 12.5px;
+        padding: 6px 14px;
+      }
+      .flyer {
+        aspect-ratio: auto;
+        min-height: auto;
+        border-radius: 8px;
+      }
+      .flyer-content {
+        padding: 18px 14px 16px;
+        gap: 14px;
+      }
+      .area-badge {
+        font-size: 15px;
+        padding: 3px 14px;
+        letter-spacing: 0.15em;
+      }
+      .main-title {
+        font-size: 22.5px;
+        line-height: 1.35;
+      }
+      .header-subcopy {
+        font-size: 14.5px;
+        letter-spacing: 0.04em;
+        gap: 6px;
+      }
+      .greeting-text,
+      .highlight-text,
+      .importance-text {
+        font-size: 17.5px;
+        line-height: 1.55;
+      }
+      .section-title {
+        font-size: 17.5px;
+        letter-spacing: 0.04em;
+        gap: 6px;
+      }
+      .online-btn-card {
+        padding: 10px 14px;
+      }
+      .btn-badge {
+        font-size: 12px;
+      }
+      .btn-title {
+        font-size: 17px;
+        white-space: normal;
+        line-height: 1.35;
+      }
+      .btn-arrow {
+        font-size: 20px;
+        margin-left: 6px;
+      }
+      .url-label {
+        font-size: 14px;
+      }
+      .url-link {
+        font-size: 15px;
+      }
+      .items-title {
+        font-size: 16px;
+      }
+      .item-tag {
+        font-size: 15.5px;
+        padding: 3px 10px;
+      }
+      .items-note {
+        font-size: 14.5px;
+      }
+      .survey-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .qr-col {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 12px 14px;
+      }
+      .qr-badge {
+        font-size: 13px;
+      }
+      .qr-img {
+        width: 100px;
+        height: 100px;
+      }
+      .qr-guide {
+        font-size: 13px;
+      }
+      .qr-text-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+      }
+      .contact-lead {
+        font-size: 15px;
+      }
+      .contact-main-row {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .contact-person {
+        font-size: 18px;
+      }
+      .contact-phone-btn {
+        font-size: 23px;
+        padding: 5px 20px;
+      }
+      .contact-closing {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="web-wrapper">
+    <!-- 画面上部のワンクリック印刷バー -->
+    <header class="action-bar">
+      <div class="action-badge">
+        <span>📋</span>
+        <span>本部「被害報告アンケート」ご案内チラシ（A4印刷・スマホ両対応・QR付）</span>
+      </div>
+      <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+        <a class="action-btn" href="../" style="background: linear-gradient(135deg, #c59737, #dfb758); text-decoration: none;">
+          <span>🏠</span> 清平修練会チラシ
+        </a>
+        <a class="action-btn" href="flyer_a4.pdf" download="被害報告アンケート_チラシ.pdf" style="background: linear-gradient(135deg, #105260, #07262c); text-decoration: none;">
+          <span>📥</span> PDF保存
+        </a>
+        <button class="action-btn" onclick="window.print()">
+          <span>🖨️</span> A4で印刷
+        </button>
+      </div>
+    </header>
+
+    <!-- チラシ本体 -->
+    <main class="flyer">
+      <!-- 背景グラデーション装飾 -->
+      <div class="flyer-bg-decor"></div>
+
+      <!-- クラシックフレーム装飾 -->
+      <div class="outer-frame"></div>
+      <div class="inner-frame"></div>
+      <div class="corner-decor corner-tl"></div>
+      <div class="corner-decor corner-tr"></div>
+      <div class="corner-decor corner-bl"></div>
+      <div class="corner-decor corner-br"></div>
+
+      <!-- コンテンツエリア -->
+      <div class="flyer-content">
+
+        <!-- 1. ヘッダー -->
+        <header class="header-section">
+          <div class="area-badge-wrap">
+            <span class="area-badge">沖縄エリアの皆様へ</span>
+          </div>
+          <h1 class="main-title">
+            <span class="title-line">本部「被害報告アンケート」</span><br>
+            <span class="title-line">ご協力のお願い</span>
+          </h1>
+          <p class="header-subcopy">
+            <span>皆様の率直な声が、</span><span>私たちの真実を伝える力となります</span>
+          </p>
+        </header>
+
+        <!-- 2. 趣旨説明・メッセージセクション -->
+        <section class="message-card">
+          <p class="greeting-text">
+            愛する沖縄エリアの食口の皆様、いつも天の父母様と真の父母様に熱い精誠を捧げてくださり、心から感謝申し上げます。
+          </p>
+
+          <!-- 背景と目的のハイライト枠 -->
+          <div class="highlight-box">
+            <p class="highlight-text">
+              現在、家庭連合において、<strong>今回の解散決定やそれに伴う影響によって、私たち食口が受けている具体的な精神的苦痛や生活上の困難などの実態を集約するための「被害報告アンケート」</strong>が実施されています。
+            </p>
+          </div>
+
+          <p class="importance-text">
+            集められた声は、<strong>国際機関への報告や今後の取り組みにおいて、私たちの現状を正しく伝えるための大切な資料</strong>となります。皆様一人ひとりの体験や率直な声が大きな力となりますので、ぜひご協力をよろしくお願いいたします。
+          </p>
+        </section>
+
+        <!-- 3. アンケート概要・ご回答セクション -->
+        <section class="survey-section">
+          <h2 class="section-title">
+            <span class="sec-title-text">アンケート概要・ご回答はこちら</span>
+          </h2>
+
+          <div class="survey-grid">
+            <!-- 左カラム：URL・入力項目案内 -->
+            <div class="survey-info-col">
+              <!-- オンライン回答ボタン -->
+              <a href="https://form.hanaservice.jp/f/202607-vr-jbyU4DtBsv" target="_blank" rel="noopener noreferrer" class="online-btn-card">
+                <div class="btn-main-info">
+                  <span class="btn-badge">ONLINE FORM</span>
+                  <span class="btn-title">スマートフォン・PCから今すぐ回答する</span>
+                </div>
+                <span class="btn-arrow">➔</span>
+              </a>
+
+              <!-- 回答フォームURL -->
+              <div class="url-box">
+                <span class="url-label">回答フォームURL：</span>
+                <a href="https://form.hanaservice.jp/f/202607-vr-jbyU4DtBsv" target="_blank" rel="noopener noreferrer" class="url-link">
+                  https://form.hanaservice.jp/f/202607-vr-jbyU4DtBsv
+                </a>
+              </div>
+
+              <!-- 入力が必要な主な基本項目 -->
+              <div class="items-box">
+                <div class="items-title">
+                  <span>📝</span>
+                  <span>入力が必要な主な基本項目：</span>
+                </div>
+                <div class="items-badge-list">
+                  <span class="item-tag">年齢</span>
+                  <span class="item-tag">所属エリア</span>
+                  <span class="item-tag">教会</span>
+                  <span class="item-tag">市町村</span>
+                  <span class="item-tag">性別</span>
+                </div>
+                <p class="items-note">
+                  ※基本項目入力後、画面の指示に従ってご回答を進めてください
+                </p>
+              </div>
+            </div>
+
+            <!-- 右カラム：QRコード（印刷配布用） -->
+            <div class="qr-col">
+              <span class="qr-badge">📱 QRコード</span>
+              <img src="images/survey_qr.png" alt="回答フォームQRコード" class="qr-img">
+              <div class="qr-text-side">
+                <p class="qr-guide">
+                  カメラで読み取って<br>
+                  回答できます
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. お問い合わせ・サポートセクション -->
+        <footer class="contact-card">
+          <p class="contact-lead">
+            ✦ ご不明な点やご質問がございましたら、下記までご連絡ください ✦
+          </p>
+          <div class="contact-main-row">
+            <div class="contact-person">
+              <span>👤 担当窓口：</span>
+              <strong>白築 エリア総務部長</strong>
+            </div>
+            <a href="tel:080-6347-7441" class="contact-phone-btn">
+              <span>📞</span>
+              <span>080-6347-7441</span>
+            </a>
+          </div>
+          <p class="contact-closing">
+            <span>皆様の温かいご協力を</span><span>心よりお願い申し上げます。</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
