@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>沖縄エリア「真の父母論講座」開催のお知らせ</title>
+  <!-- Google Fonts: 格調高い明朝体 & クラシカル欧文 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Serif+JP:wght@600;700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Serif JP', serif;
+      background: #040814;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 8px 40px;
+    }
+
+    /* Web操作バー */
+    .action-toolbar {
+      max-width: 800px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 18, 36, 0.95);
+      border: 1px solid rgba(223, 186, 103, 0.5);
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      margin-bottom: 14px;
+    }
+    .toolbar-info {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #f3d790;
+      letter-spacing: 0.05em;
+    }
+    .print-btn {
+      background: linear-gradient(135deg, #dfba67, #b8860b);
+      color: #080d1a;
+      border: none;
+      padding: 8px 24px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 3px 12px rgba(218, 185, 107, 0.4);
+      transition: all 0.2s ease;
+    }
+    .print-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 18px rgba(218, 185, 107, 0.6);
+    }
+
+    /* ========================================================
+       A4 ポスターアートボード (210mm × 297mm 完全準拠)
+       ======================================================== */
+    .flyer-artboard {
+      width: 100%;
+      max-width: 794px;
+      height: 1123px;
+      position: relative;
+      background-image: url('images/cheonbo_mystic_perfect.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 2px;
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      border: 1.5px solid #dfba67;
+    }
+
+    /* 上下の繊細なソフトシェード */
+    .soft-vignette {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom,
+                  rgba(5, 12, 30, 0.55) 0%,
+                  rgba(5, 12, 30, 0.08) 15%,
+                  transparent 28%,
+                  transparent 48%,
+                  rgba(4, 9, 24, 0.35) 62%,
+                  rgba(3, 7, 18, 0.72) 80%,
+                  rgba(2, 5, 15, 0.85) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* 格調高いゴールドの二重外枠 */
+    .outer-gold-border {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px solid rgba(223, 186, 103, 0.4);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .inner-gold-border {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      right: 3px;
+      bottom: 3px;
+      border: 1.5px solid rgba(223, 186, 103, 0.75);
+      pointer-events: none;
+    }
+    .corner-ornament {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #dfba67;
+    }
+    .c-tl { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+    .c-tr { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+    .c-bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+    .c-br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+    /* メインコンテンツ */
+    .poster-body {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px 32px 20px;
+      box-sizing: border-box;
+    }
+
+    /* 1. ヘッダーエリア */
+    .header-block {
+      text-align: center;
+      padding-top: 2px;
+    }
+    .area-badge-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+    .wing-line {
+      width: 52px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #dfba67);
+    }
+    .wing-line.r {
+      background: linear-gradient(to left, transparent, #dfba67);
+    }
+    .area-badge {
+      font-size: 1.25rem; /* 約20px 特大化 */
+      font-weight: 800;
+      letter-spacing: 0.35em;
+      color: #ffeaaf;
+      text-shadow: 0 0 12px rgba(223, 186, 103, 0.9);
+      padding: 3px 18px;
+      border-top: 1.2px solid rgba(223, 186, 103, 0.7);
+      border-bottom: 1.2px solid rgba(223, 186, 103, 0.7);
+    }
+    .main-title {
+      font-size: 3.65rem; /* 約58.4px 特大迫力タイトル */
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      line-height: 1.15;
+      margin-bottom: 3px;
+      background: linear-gradient(180deg, #ffffff 0%, #fff7dc 30%, #ffd060 65%, #c59320 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 3px 14px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 30px rgba(223, 186, 103, 0.75));
+    }
+    .sub-title {
+      font-size: 1.85rem; /* 約29.6px 特大 */
+      font-weight: 700;
+      color: #fbf5e6;
+      letter-spacing: 0.38em;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.9);
+    }
+
+    /* 2. 中央パノラマビュー空間 */
+    .sacred-view-window {
+      height: 60px; /* 文字拡大に合わせて高さを最適化し、神殿のドームと光芒を見せつつ全体を収める */
+      position: relative;
+    }
+
+    /* 3. 下部情報セクション */
+    .bottom-info-stage {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* 基本開催情報 */
+    .overview-strip {
+      background: rgba(6, 14, 34, 0.68); /* 可読性を極大化 */
+      backdrop-filter: blur(8px);
+      border-top: 1.5px solid rgba(223, 186, 103, 0.75);
+      border-bottom: 1.5px solid rgba(223, 186, 103, 0.75);
+      padding: 9px 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    .overview-row {
+      display: flex;
+      align-items: baseline;
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(223, 186, 103, 0.25);
+    }
+    .overview-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .row-label {
+      width: 135px;
+      flex-shrink: 0;
+      font-size: 1.35rem; /* 約21.6px 特大 */
+      font-weight: 800;
+      color: #ffd875;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+    }
+    .row-val {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1.4rem; /* 約22.4px 年配向け特大 */
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.35;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.8);
+    }
+    .row-val .accent-date {
+      font-family: 'Cinzel', 'Noto Sans JP', sans-serif;
+      font-size: 1.75rem; /* 約28px 超特大強調 */
+      font-weight: 900;
+      color: #ffdf7a;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 15px rgba(255, 223, 122, 0.6), 0 2px 6px rgba(0, 0, 0, 0.9);
+    }
+    .row-val .sub-addr {
+      display: inline-block;
+      font-size: 1.15rem; /* 約18.4px */
+      font-weight: 600;
+      color: #e2ecfa;
+      margin-left: 10px;
+    }
+    .row-val .sub-addr a {
+      color: #ffd875;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .row-val .accent-price {
+      font-family: 'Cinzel', sans-serif;
+      font-size: 1.65rem; /* 約26.4px */
+      font-weight: 900;
+      color: #ffdf7a;
+      text-shadow: 0 0 12px rgba(255, 223, 122, 0.5);
+    }
+
+    /* 当日のスケジュール */
+    .schedule-strip {
+      background: rgba(6, 14, 34, 0.65);
+      backdrop-filter: blur(8px);
+      border-top: 1.5px solid rgba(223, 186, 103, 0.75);
+      border-bottom: 1.5px solid rgba(223, 186, 103, 0.75);
+      padding: 9px 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    .sched-head {
+      font-size: 1.38rem; /* 約22px */
+      font-weight: 800;
+      color: #ffd875;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid rgba(223, 186, 103, 0.35);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+    }
+    .sched-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 24px;
+    }
+    .sched-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 3px 8px;
+      border-left: 3.5px solid #dfba67;
+      background: rgba(14, 26, 52, 0.4);
+      border-radius: 2px;
+    }
+    .sched-time {
+      font-family: 'Cinzel', sans-serif;
+      font-size: 1.22rem; /* 約19.5px */
+      font-weight: 800;
+      color: #ffdf7a;
+      letter-spacing: 0.04em;
+      width: 66px;
+      flex-shrink: 0;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    }
+    .sched-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1.28rem; /* 約20.5px 特大 */
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.03em;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+    }
+
+    /* 昼食と持ち物 */
+    .details-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .detail-card {
+      background: rgba(6, 14, 34, 0.6);
+      backdrop-filter: blur(8px);
+      border-top: 1.5px solid rgba(223, 186, 103, 0.65);
+      border-bottom: 1.5px solid rgba(223, 186, 103, 0.65);
+      border-left: none;
+      border-right: none;
+      padding: 8px 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+    .detail-head {
+      font-size: 1.3rem; /* 約20.8px */
+      font-weight: 800;
+      color: #ffd875;
+      letter-spacing: 0.08em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 3px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    }
+    .detail-body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1.25rem; /* 約20px */
+      font-weight: 600;
+      color: #f7f9fd;
+      line-height: 1.38;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+    }
+
+    /* お申し込み方法 */
+    .apply-card {
+      background: linear-gradient(135deg, rgba(14, 25, 52, 0.7), rgba(8, 16, 36, 0.8));
+      backdrop-filter: blur(10px);
+      border: 1.8px solid #dfba67;
+      border-radius: 4px;
+      padding: 9px 20px;
+      box-shadow: 0 6px 24px rgba(223, 186, 103, 0.25);
+    }
+    .apply-head {
+      font-size: 1.35rem; /* 約21.6px */
+      font-weight: 800;
+      color: #ffdf85;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 3px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+    }
+    .apply-body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1.28rem; /* 約20.5px */
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.42;
+      letter-spacing: 0.03em;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+    }
+
+    /* A4 印刷スタイル */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+      body {
+        background: none;
+        padding: 0;
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .flyer-artboard {
+        max-width: 210mm;
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        max-height: 297mm;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        overflow: hidden;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .overview-strip, .schedule-strip, .details-split, .apply-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+
+    /* スマホ画面対応 (レスポンシブ & 禁則処理) */
+    @media (max-width: 650px) {
+      body {
+        padding: 6px 4px;
+      }
+      .flyer-artboard {
+        height: auto;
+        min-height: auto;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+      }
+      .poster-body {
+        padding: 14px 10px;
+      }
+      .main-title {
+        font-size: 2.35rem;
+      }
+      .sub-title {
+        font-size: 1.35rem;
+      }
+      .sacred-view-window {
+        height: 50px;
+      }
+      .overview-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+      }
+      .row-label {
+        width: 100%;
+        font-size: 1.25rem;
+      }
+      .row-val {
+        font-size: 1.25rem;
+      }
+      .row-val .sub-addr {
+        margin-left: 0;
+        display: block;
+        margin-top: 3px;
+      }
+      .sched-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .sched-text {
+        font-size: 1.2rem;
+      }
+      .details-split {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .detail-body, .apply-body {
+        font-size: 1.2rem;
+      }
+      .nobrk {
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Web操作バー -->
+  <div class="action-toolbar no-print">
+    <div class="toolbar-info">
+      ✨ <strong>沖縄エリア「真の父母論講座」チラシ</strong>（A4・1枚完結版）
+    </div>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <a href="../" class="print-btn" style="background: rgba(255, 255, 255, 0.15); color: #f3d790; text-decoration: none; border: 1px solid rgba(223, 186, 103, 0.5);">
+        🕊️ 清平修練会チラシへ
+      </a>
+      <a href="flyer_a4.pdf" download="真の父母論講座_チラシ.pdf" class="print-btn" style="background: rgba(223, 186, 103, 0.2); color: #ffd875; text-decoration: none; border: 1px solid #dfba67;">
+        📥 PDF保存
+      </a>
+      <button class="print-btn" onclick="window.print()">
+        🖨️ A4で印刷
+      </button>
+    </div>
+  </div>
+
+  <!-- チラシ本体（A4ポスターアートボード） -->
+  <div class="flyer-artboard">
+    <!-- 繊細なソフトシェード -->
+    <div class="soft-vignette"></div>
+
+    <!-- クラシカルゴールド二重外枠 -->
+    <div class="outer-gold-border">
+      <div class="inner-gold-border">
+        <div class="corner-ornament c-tl"></div>
+        <div class="corner-ornament c-tr"></div>
+        <div class="corner-ornament c-bl"></div>
+        <div class="corner-ornament c-br"></div>
+      </div>
+    </div>
+
+    <div class="poster-body">
+      
+      <!-- 1. ヘッダーエリア -->
+      <header class="header-block">
+        <div class="area-badge-wrap">
+          <div class="wing-line"></div>
+          <span class="area-badge">沖縄エリア</span>
+          <div class="wing-line r"></div>
+        </div>
+        <h1 class="main-title">「真の父母論講座」</h1>
+        <div class="sub-title">開催のお知らせ</div>
+      </header>
+
+      <!-- 2. 中央: 神殿のパノラマビュー空間（遮るものなく神殿の全景を見せる） -->
+      <div class="sacred-view-window"></div>
+
+      <!-- 3. 下部: 背景が透ける透明リボンレイアウト -->
+      <div class="bottom-info-stage">
+
+        <!-- 基本開催情報 -->
+        <section class="overview-strip">
+          <div class="overview-row">
+            <div class="row-label">✦ 日時</div>
+            <div class="row-val">
+              <span class="accent-date">10/4（日）</span> 9:30 〜 15:30
+            </div>
+          </div>
+
+          <div class="overview-row">
+            <div class="row-label">✦ 会場</div>
+            <div class="row-val">
+              <strong>結の街</strong>（<span class="nobrk">浦添市産業振興センター</span>） 大講義室
+              <span class="sub-addr">（住所：浦添市勢理客4-13-1 <a href="https://maps.google.com/?q=結の街+浦添市勢理客4-13-1" target="_blank" rel="noopener noreferrer">地図</a>）</span>
+            </div>
+          </div>
+
+          <div class="overview-row">
+            <div class="row-label">✦ 講師</div>
+            <div class="row-val">
+              <strong>小畑 守男 講師</strong>（中央修練所 所長）
+            </div>
+          </div>
+
+          <div class="overview-row">
+            <div class="row-label">✦ 参加費</div>
+            <div class="row-val">
+              お一人様 <span class="accent-price">1,000円</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 当日のスケジュール -->
+        <section class="schedule-strip">
+          <div class="sched-head">
+            ✦ 当日のスケジュール
+          </div>
+          <div class="sched-grid">
+            <!-- 前半 -->
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <div class="sched-item">
+                <span class="sched-time">09:30</span>
+                <span class="sched-text">開校式・挨拶</span>
+              </div>
+              <div class="sched-item">
+                <span class="sched-time">09:45</span>
+                <span class="sched-text">講義①</span>
+              </div>
+              <div class="sched-item">
+                <span class="sched-time">10:45</span>
+                <span class="sched-text">休憩</span>
+              </div>
+              <div class="sched-item">
+                <span class="sched-time">11:00</span>
+                <span class="sched-text">講義②</span>
+              </div>
+              <div class="sched-item">
+                <span class="sched-time">12:00</span>
+                <span class="sched-text">昼食・リフレクション</span>
+              </div>
+            </div>
+
+            <!-- 後半 -->
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <div class="sched-item">
+                <span class="sched-time">13:00</span>
+                <span class="sched-text">講義③</span>
+              </div>
+              <div class="sched-item">
+                <span class="sched-time">14:00</span>
+                <span class="sched-text">休憩</span>
+              </div>
+              <div class="sched-item">
+                <span class="sched-time">14:15</span>
+                <span class="sched-text">講義④</span>
+              </div>
+              <div class="sched-item">
+                <span class="sched-time">15:15</span>
+                <span class="sched-text">感想文記入・閉講式</span>
+              </div>
+              <div class="sched-item">
+                <span class="sched-time">15:30</span>
+                <span class="sched-text">解散</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 昼食と持ち物 -->
+        <div class="details-split">
+          <div class="detail-card">
+            <div class="detail-head">✦ 昼食について</div>
+            <div class="detail-body">
+              当日は軽食と飲み物をご用意してお待ちしております。
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-head">✦ 持ち物</div>
+            <div class="detail-body">
+              筆記用具、講義ノート
+            </div>
+          </div>
+        </div>
+
+        <!-- お申し込み方法 -->
+        <section class="apply-card">
+          <div class="apply-head">
+            ✦ お申し込み方法
+          </div>
+          <div class="apply-body">
+            参加をご希望の方は、所属の基台長または区域長までご連絡をお願いいたします。
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
